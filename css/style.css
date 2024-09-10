@@ -1,0 +1,130 @@
+/*Estrutura basica da página*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    --background: #FFFFFF;
+    --black: #000;
+    --primary: #0056FB;
+
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    width: 100%;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 100;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo{
+    width: 70%;
+    margin: auto;
+}
+
+
+#form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#form h2{
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#form form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#form p{
+    font-weight: bold;
+}
+
+input{
+    padding: 0.8em;
+    border: 1px solid var(--black);
+    border-radius: 0.5em;
+}
+
+input::placeholder{
+    color: var(--black);
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--background);
+    font-weight: bold;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+
+
+#text{
+    width: 50%;
+    height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+    color: var(--background);
+}
+
+
+
+#text img{
+    width: 100%;
+}
+
+#text h1{
+    padding: 1em 0;
+    letter-spacing: 0.2em;
+}
+
+#text p{
+    letter-spacing: 0.2em;
+    text-align: justify;
+    line-height: 2em;
+}
+
+@media (max-width:768px){
+    #form{
+        width: 100%;
+        margin: 12em 0;
+    }
+
+    #text{
+        width: 100%;
+        height: 100%;
+        padding: 5em 0;
+    }
+
+    .conteudo{
+        width: 90%;
+    }
+
+    .container{
+
+        flex-direction: column;
+    }
+}
